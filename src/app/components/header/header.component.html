@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="top-bar">
+    <ion-grid>
+      <ion-row class="align-center">
+        <ion-col size="2">         
+          <a routerLink="/home"> <img src="assets/Logo.jpg"  alt="Logo" class="logo" /></a>
+                </ion-col>
+        <ion-col size="4" class="livraison">
+          <ion-icon name="location-outline"></ion-icon>
+          <div>
+            <small>votre adresse de livraison</small><br>
+            <strong>Cameroun, Dschang</strong>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <ion-searchbar placeholder="Rechercher..." animated></ion-searchbar>
+        </ion-col>
+        <ion-col size="2" class="icons">
+          <ion-button fill="clear" size="small">
+            <ion-icon name="headset-outline"></ion-icon>
+            <ion-label>service client</ion-label>
+          </ion-button>
+          <ion-button fill="clear" size="small">
+            <ion-icon name="book-outline"></ion-icon>
+            <ion-label>blog</ion-label>
+          </ion-button>
+          <ion-button fill="clear" size="small" routerLink="/login">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>connectez-vous</ion-label>
+          </ion-button>
+          <ion-button fill="clear" size="small" routerLink="/panier">
+            <ion-icon name="cart-outline"></ion-icon>
+            <ion-label>panier</ion-label>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+  <ion-toolbar class="categorie-bar">
+    <ion-segment value="tous" scrollable>
+      <ion-segment-button value="tous" routerLink="/produit">
+      <ion-label >Tous</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="montres">
+        <ion-label>Montres</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="machines">
+        <ion-label>Machines</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="supports">
+        <ion-label>Supports</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="accessoires">
+        <ion-label>accessoires</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="blog">
+        <ion-label>Blog</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="autres">
+        <ion-label>Autres</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
