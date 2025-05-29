@@ -1,63 +1,72 @@
 <ion-header>
+  <!-- Top Navigation Bar -->
   <ion-toolbar class="top-bar">
     <ion-grid>
       <ion-row class="align-center">
-        <ion-col size="2">         
-          <a routerLink="/home"> <img src="assets/Logo.jpg"  alt="Logo" class="logo" /></a>
-                </ion-col>
-        <ion-col size="4" class="livraison">
+        <!-- Logo -->
+        <ion-col size="2" class="logo-col">
+          <a routerLink="/home">
+            <img src="assets/Logo.jpg" alt="Logo" class="logo" />
+          </a>
+        </ion-col>
+
+        <!-- Livraison Info -->
+        <ion-col size="3" class="livraison">
           <ion-icon name="location-outline"></ion-icon>
           <div>
-            <small>votre adresse de livraison</small><br>
+            <small>votre adresse de livraison</small><br />
             <strong>Cameroun, Dschang</strong>
           </div>
         </ion-col>
-        <ion-col size="4">
-          <ion-searchbar placeholder="Rechercher..." animated></ion-searchbar>
+
+        <!-- Barre de recherche -->
+        <ion-col size="4" class="search-col">
+          <ion-searchbar placeholder="Rechercher..." animated class="custom-searchbar"></ion-searchbar>
         </ion-col>
-        <ion-col size="2" class="icons">
-          <ion-button fill="clear" size="small">
-            <ion-icon name="headset-outline"></ion-icon>
-            <ion-label>service client</ion-label>
-          </ion-button>
-          <ion-button fill="clear" size="small">
-            <ion-icon name="book-outline"></ion-icon>
-            <ion-label>blog</ion-label>
-          </ion-button>
-          <ion-button fill="clear" size="small" routerLink="/login">
-            <ion-icon name="person-outline"></ion-icon>
-            <ion-label>connectez-vous</ion-label>
-          </ion-button>
-          <ion-button fill="clear" size="small" routerLink="/panier">
-            <ion-icon name="cart-outline"></ion-icon>
-            <ion-label>panier</ion-label>
-          </ion-button>
+
+        <!-- Icônes -->
+        <ion-col size="3" class="icons">
+          <div class="icon-group">
+            <ion-button fill="clear" size="small">
+              <ion-icon name="headset-outline"></ion-icon>
+              <ion-label>Service</ion-label>
+            </ion-button>
+            <ion-button fill="clear" size="small" routerLink="/login">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-label>Compte</ion-label>
+            </ion-button>
+            <ion-button fill="clear" size="small" routerLink="/panier">
+              <ion-icon name="cart-outline"></ion-icon>
+              <ion-label>Panier</ion-label>
+            </ion-button>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-toolbar>
 
+  <!-- Catégories -->
   <ion-toolbar class="categorie-bar">
     <ion-segment value="tous" scrollable>
       <ion-segment-button value="tous" routerLink="/produit">
-      <ion-label >Tous</ion-label>
+        <ion-label>Tous</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="montres">
-        <ion-label>Montres</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="machines">
-        <ion-label>Machines</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="supports">
+      <ion-segment-button value="supports" routerLink="/suports">
         <ion-label>Supports</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="accessoires">
-        <ion-label>accessoires</ion-label>
+      <ion-segment-button value="machines" routerLink="/machines">
+        <ion-label>Machines</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="montres" routerLink="/montres">
+        <ion-label>Montres</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="accessoires" routerLink="/example">
+        <ion-label>Accessoires</ion-label>
       </ion-segment-button>
       <ion-segment-button value="blog">
-        <ion-label>Blog</ion-label>
+        <ion-label>Découverte</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="autres">
+      <ion-segment-button value="autres" routerLink="/autres">
         <ion-label>Autres</ion-label>
       </ion-segment-button>
     </ion-segment>
