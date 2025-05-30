@@ -1,5 +1,41 @@
-<app-header></app-header>
+<ion-content class="page-montres">
 
-<ion-content [fullscreen]="true">
-<p>Ici est la page des montres</p>
+  <!-- Titre principal stylisé -->
+  <h1 class="main-page-title">Nos Montres Connectées</h1>
+
+  <!-- Message affiché s'il n'y a aucun produit -->
+  <p *ngIf="!watchProducts || watchProducts.length === 0" class="no-products-message">
+    Aucune montre disponible pour le moment.
+  </p>
+
+  <!-- Conteneur des cartes produits -->
+  <div class="cards-container">
+    <ion-card
+      *ngFor="let product of watchProducts"
+      class="product-card"
+      [routerLink]="['/detail-produit', product.id]">
+
+      <img [src]="product.image" [alt]="product.name" />
+
+      <ion-card-header>
+        <ion-card-title>{{ product.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="rating">
+          <ion-icon
+            *ngFor="let star of getStarIcons(product.rating)"
+            [name]="star"
+            [class.filled]="star === 'star'">
+          </ion-icon>
+          <span>{{ product.reviews }}</span>
+        </div>
+        <p class="price">{{ product.price }} fcfa</p>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <!-- Pied de page -->
+  <app-footer></app-footer>
 </ion-content>

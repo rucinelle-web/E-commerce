@@ -1,0 +1,73 @@
+// src/app/components/footer/footer.component.scss
+
+footer {
+  background-color: #000; // Black background as per screenshot
+  color: #fff; // White text color
+  padding: 30px 20px; // Padding for spacing
+  width: 100%; // Full width
+  box-sizing: border-box; // Include padding in width
+  display: flex;
+  justify-content: center; // Center content horizontally
+  align-items: center;
+  margin-top: 50px; // Add some space above the footer
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; // Stack elements vertically on small screens
+  align-items: center; // Center content horizontally
+  max-width: 1200px; // Limit width on very large screens
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px; // Space between icons
+  margin-bottom: 25px; // Space below icons
+
+  a {
+    color: #fff; // White color for icons
+    font-size: 2.5em; // Larger icon size
+    transition: color 0.3s ease-in-out; // Smooth transition on hover
+
+    &:hover {
+      color: #007bff; // Hover color (e.g., primary blue)
+    }
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column; // Stack links vertically on small screens
+  align-items: center;
+  text-align: center; // Center text
+  font-size: 0.9em;
+
+  .copyright {
+    margin-bottom: 10px; // Space between copyright and privacy policy
+    color: #bbb; // Slightly lighter grey for copyright
+  }
+
+  .privacy-policy {
+    color: #fff; // White for privacy policy link
+    text-decoration: none; // No underline by default
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #007bff; // Hover color
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footer-links {
+    flex-direction: row; // Arrange links horizontally on larger screens
+    gap: 40px; // More space between links
+  }
+
+  .copyright {
+    margin-bottom: 0; // Remove bottom margin when horizontal
+  }
+}
