@@ -32,12 +32,12 @@ const routes: Routes = [
     loadChildren: () => import('./autres/autres.module').then( m => m.AutresPageModule)
   },
   {
-    path: 'example',
-    loadChildren: () => import('./example/example.module').then( m => m.ExamplePageModule)
-  },
-  {
     path: 'detail-produit/:id',
     loadChildren: () => import('./detail-produit/detail-produit.module').then( m => m.DetailProduitPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

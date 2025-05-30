@@ -81,7 +81,7 @@ export class HomePage implements OnInit {
       },
       {
         id: 9,
-        image: 'assets/pppe.jpg',
+        image: 'assets/montre.jpg',
         name: 'Sécurité Connectée pour Votre Foyer',
         rating: 4,
         reviews: 150,
@@ -89,7 +89,7 @@ export class HomePage implements OnInit {
       },
       {
         id: 10,
-        image: 'assets/pppe.jpg',
+        image: 'assets/montre2.jpg',
         name: 'Wearables et Technologie Embarquée',
         rating: 3,
         reviews: 70,
@@ -97,7 +97,7 @@ export class HomePage implements OnInit {
       },
        {
         id: 11,
-        image: 'assets/pppe.jpg',
+        image: 'assets/montre3.jpg',
         name: 'Électronique Domestique Intelligente',
         rating: 4,
         reviews: 90,
