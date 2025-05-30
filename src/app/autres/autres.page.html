@@ -1,6 +1,54 @@
 <app-header></app-header>
 
 
-<ion-content [fullscreen]="true">
-<p>Ceci est la page des autres produits</p>
+<ion-content class="ion-padding">
+
+  <!-- Section 1 : Bics, Sacs, Tennis -->
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Autres accessoires</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let produit of produits">
+        <ion-card>
+          <img [src]="produit.image" alt="{{ produit.nom }}" />
+          <ion-card-header>
+            <ion-card-title>{{ produit.nom }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Prix : {{ produit.prix }}</p>
+            <ion-button expand="full" color="success">Acheter</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Section 2 : Parapluies, épouvantails, autres tennis -->
+  <ion-card color="light" class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Articles Divers</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let item of autresProduits">
+        <ion-card>
+          <img [src]="item.image" alt="{{ item.nom }}" />
+          <ion-card-header>
+            <ion-card-title>{{ item.nom }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Prix : {{ item.prix }}</p>
+            <ion-button expand="full" color="tertiary">Acheter</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
